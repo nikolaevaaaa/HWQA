@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "0252849b-eb6b-4ee1-90c7-10ec3ede853f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Do register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "nikkkkk@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "nikkkkk1111",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\": \"kaaaaaaakkkk@gmail.com\",\n\"name\": \"kkkk111111\",\n\"tasks\":[11, 12, 90],\n\"companies\":[20],\n\"hobby\":\"Хобби\",\n\"adress\": \"Адрес\",\n\"name1\": \"Имя 1\",\n\"surname1\": \"Фамилия 1\",\n\"fathername1\": \"Отчество 1\",\n\"cat\":\"Кошечка\",\n\"dog\": \"Собачка\",\n\"parrot\":\"Попугайчик\",\n\"cavy\":\"Морская свинка\",\n\"hamster\":\"Хомячок\",\n\"squirrel\":\"Белочка\",\n\"phone\":\"Телефон\",\n\"inn\":\"999999999999\",\n\"gender\":\"Пол\",\n\"birthday\":\"19.09.1999\",\n\"date_start\":\"20.08.2022\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add avatar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "b0uXQSeqi/1551514006_1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addavatar?email=nikkkkk@gmail.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "nikkkkk@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete avatar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteavatar?email=nikkkkk@gmail.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "nikkkkk@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"task_title\":\"to do homework, to do sport\",\n\"task_description\":\"create\",\n\"email_owner\":\"kaaaaaaakkkk@gmail.com\",\n\"email_assign\":\"kaaaaaaakkkk@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createtask",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createtask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deletetask?email_owner=kaaaaaaakkkk@gmail.com&task_id=152  ",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deletetask"
+					],
+					"query": [
+						{
+							"key": "email_owner",
+							"value": "kaaaaaaakkkk@gmail.com"
+						},
+						{
+							"key": "task_id",
+							"value": "152  "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user full",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/getuserfull?email=kaaaaaaakkkk@gmail.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"getuserfull"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "kaaaaaaakkkk@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Magic search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/magicsearch?query=ilya24",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"magicsearch"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "ilya24"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Full update user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\": \"kaaaaaaakkkk@gmail.com\",\n\"name\": \"kkkk111111\",\n\"tasks\":[11, 12, 90],\n\"companies\":[20],\n\"hobby\":\"Хобби\",\n\"adress\": \"Адрес\",\n\"name1\": \"Имя 1\",\n\"surname1\": \"Фамилия 1\",\n\"fathername1\": \"Отчество 1\",\n\"cat\":\"Кошечка\",\n\"dog\": \"Собачка\",\n\"parrot\":\"Попугайчик\",\n\"cavy\":\"Морская свинка\",\n\"hamster\":\"Хомячок\",\n\"squirrel\":\"Белочка\",\n\"phone\":\"Телефон\",\n\"inn\":\"999999999999\",\n\"gender\":\"f\",\n\"birthday\":\"19.09.1999\",\n\"date_start\":\"20.08.2022\",\n\"adres\":\"oooo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/fullupdateuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"fullupdateuser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
